@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2> Download </h2>
+    <input type="text"id= "filename"placeholder="Enter filename">
+    <button onclick = "downloadFile()">Download File</button>
+
+<script>
+function downloadFile(){
+const fileanme = document.getElenentByld('filename').value;
+
+if(filename.length > 0){
+    const url = '/files/${filename}';
+
+    const a = document.createElent('a');
+    a.href = url;
+    a.download = filename;
+    document.body.appendChild(a);
+    a.click();
+    document.body.removeChild(a);
+}else{
+    alert('Please enter a filename');
+}
+
+}
+</script>
+
+
+
+</body>
+</html>
